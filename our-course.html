@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Course</title>
+    <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/our-course.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Top bar -->
+        <div class="header__top-bar">
+            <div class="wrp">
+                <div class="header__contact">
+                    <a class="header__contact-phone"><span>+44(0) 1865 516162</span></a>
+                    <a class="header__contact-email"><span>info@oxfordenglish.co.uk</span></a>
+                </div>
+                <div class="header__social">
+                    <a href="#" class="header__social-link header__social-link--facebook"></a>
+                    <a href="#" class="header__social-link header__social-link--instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="header__logo">
+            <a href="#" class="header__logo-link">
+                <img src="./asset/logo.png" alt="The Oxford English Centre" class="header__logo-image">
+            </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+                <li class="header__nav-item header__nav-item--dropdown">
+                    <a href="#" class="header__nav-link">Our School</a>
+                </li>
+                <li class="header__nav-item header__nav-item--dropdown">
+                    <a href="#" class="header__nav-link">Our Courses</a>
+                </li>
+                <li class="header__nav-item header__nav-item--dropdown">
+                    <a href="#" class="header__nav-link header__nav-link--highlight">Student Life</a>
+                </li>
+                <li class="header__nav-item header__nav-item--dropdown">
+                    <a href="#" class="header__nav-link">Why OEC?</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link header__nav-link--search">
+                        <span class="header__nav-icon-search"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--Banner-->
+    <section class="banner">
+        <!-- Hình nền -->
+        <div class="banner__background">
+            <img src="background-image.jpg" alt="Banner Background" class="banner__image">
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="banner__content">
+            <h2 class="banner__title">Social Activities</h2>
+            <p class="banner__description">
+                Make friends and have fun with our exciting social programme!
+            </p>
+        </div>
+
+        <!-- Menu bên phải -->
+        <div class="banner__menu">
+            <a href="#" class="banner__menu-item">Social Programme</a>
+            <a href="#" class="banner__menu-item">Download</a>
+        </div>
+    </section>
+    <!-- our course-->
+    <section class="course-page__container">
+        <!-- Cột chính -->
+        <div class="course-page__main">
+            <!-- Tabs -->
+            <div class="course-tabs">
+                <div class="course-tabs__nav">
+                    <button class="course-tabs__nav-item course-tabs__nav-item--active" data-tab="overview">Overview</button>
+                    <button class="course-tabs__nav-item" data-tab="timetable">Timetable</button>
+                    <button class="course-tabs__nav-item" data-tab="exam-format">Exam Format</button>
+                    <button class="course-tabs__nav-item" data-tab="why-cambridge">Why Cambridge Exams?</button>
+                </div>
+                <div class="course-tabs__content">
+                    <!-- Overview Tab -->
+                    <div class="course-tabs__content-item course-tabs__content-item--active" id="overview">
+                        <iframe class="course-tabs__video" src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+                        <p>Top class training by our experienced, highly-qualified exam teachers...</p>
+                    </div>
+
+                    <!-- Timetable Tab -->
+                    <div class="course-tabs__content-item" id="timetable">
+                        <p class="course-tabs__subheading">Cambridge Exam Courses Example Timetable (subject to change)</p>
+                        <iframe class="course-tabs__pdf" src="your-pdf-url.pdf" width="100%" height="500px"></iframe>
+                        <a href="your-download-link.pdf" class="course-tabs__download-link">Download [332.17 KB]</a>
+                    </div>
+
+                    <!-- Exam Format Tab -->
+                    <div class="course-tabs__content-item" id="exam-format">
+                        <p>Cambridge English: Advanced (CAE) is a thorough test of all areas of language ability...</p>
+                        <table class="course-tabs__table">
+                            <thead>
+                                <tr>
+                                    <th>Paper</th>
+                                    <th>Content</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Reading and Use of English<br>(1 hour 30 minutes)</td>
+                                    <td>8 parts/56 questions</td>
+                                    <td>Shows you can deal confidently with different types of text...</td>
+                                </tr>
+                                <tr>
+                                    <td>Writing<br>(1 hour 30 minutes)</td>
+                                    <td>2 parts</td>
+                                    <td>You create two different pieces of writing...</td>
+                                </tr>
+                                <tr>
+                                    <td>Listening<br>(about 40 minutes)</td>
+                                    <td>4 parts/30 questions</td>
+                                    <td>Tests your ability to follow and understand a range of spoken materials...</td>
+                                </tr>
+                                <tr>
+                                    <td>Speaking<br>(15 minutes per pair of candidates)</td>
+                                    <td>4 parts</td>
+                                    <td>Tests your ability to communicate effectively in face-to-face situations...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Why Cambridge Exams Tab -->
+                    <div class="course-tabs__content-item" id="why-cambridge">
+                        <iframe class="course-tabs__video" src="https://www.youtube.com/embed/another-video-id" allowfullscreen></iframe>
+                        <p>Where will a Cambridge English exam take you?...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Section -->
+            <section class="course-benefits">
+                <h2>Why choose a Cambridge Exam Course?</h2>
+                <ul>
+                    <li>Standard (20 lessons General English + 10 lessons CAE Exam per week).</li>
+                    <li>Improve your range and accuracy of grammar and vocabulary.</li>
+                    <li>Enhance your speaking, listening, reading, and writing skills.</li>
+                    <li>Familiarize yourself with different accents you may hear in the exam.</li>
+                    <li>Develop natural pronunciation.</li>
+                    <li>Prepare with mock exams and regular tests.</li>
+                    <li>Receive help booking your exam.</li>
+                </ul>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="course-faq">
+                <h2>FAQs</h2>
+                <div class="faq-item">
+                    <h3>Do I need to take an entry test before I book?</h3>
+                    <p>Yes. We will send you a pre-course test to do in advance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>CAE Course Dates</h3>
+                    <p>Course dates go here...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cột bên phải -->
+        <aside class="course-page__sidebar">
+            <section class="key-facts">
+                <h3>Key Facts</h3>
+                <ul>
+                    <li><strong>Class duration:</strong> 4 – 12 weeks</li>
+                    <li><strong>Class size:</strong> maximum 14</li>
+                    <li><strong>Lesson duration:</strong> 45 minutes</li>
+                    <li><strong>Lessons per week:</strong> 30</li>
+                    <li>
+                        <strong>Learning materials:</strong>
+                        <ul>
+                            <li>1-10 weeks £35</li>
+                            <li>11-20 weeks £70</li>
+                            <li>21-30 weeks £100</li>
+                            <li>31+ weeks £120</li>
+                        </ul>
+                    </li>
+                    <li><strong>Start:</strong> See Course Dates below</li>
+                    <li><strong>Minimum age:</strong> 16</li>
+                </ul>
+            </section>
+
+            <section class="registration-info">
+                <h3>Registration & Course Deposits</h3>
+                <ul>
+                    <li><strong>Registration Fee:</strong> £90.00</li>
+                    <li><strong>Tuition & Accommodation Deposit:</strong> £490.00</li>
+                    <li><strong>Tuition Only Deposit:</strong> £290.00</li>
+                    <li><strong>Payment by debit or credit card</strong></li>
+                    <li>
+                        <strong>Payment by bank transfer:</strong>
+                        <a href="bank-details-link">See Bank Details</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </section>
+    <!--Footer-->
+    <footer class="footer">
+        <!-- Phần liên kết -->
+        <div class="footer__links">
+            <ul class="footer__links-list">
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Prices</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Terms & Conditions</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Accommodation</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Student Welfare</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Become a Homestay Host</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Booking & Payment</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">School Policies</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Student Visa</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__links-link">Accreditations & Memberships</a></li>
+            </ul>
+        </div>
+
+        <!-- Phần thông tin -->
+        <div class="footer__info">
+            <p class="footer__info-text">
+                The Oxford Centre Ltd. Registered in England No 3275134. Registered Office: 4th Floor, 7/10 Chandos Street, Cavendish Square, London. W1G 9DQ
+            </p>
+        </div>
+
+        <!-- Phần chứng nhận -->
+        <div class="footer__certifications">
+            <img src="british-council-logo.png" alt="British Council Accreditation" class="footer__certifications-logo">
+            <img src="english-uk-logo.png" alt="English UK Accreditation" class="footer__certifications-logo">
+            <img src="cambridge-logo.png" alt="Cambridge English Accreditation" class="footer__certifications-logo">
+        </div>
+
+        <!-- Phần mạng xã hội -->
+        <div class="footer__social">
+            <a href="#" class="footer__social-link footer__social-link--facebook">Facebook</a>
+            <a href="#" class="footer__social-link footer__social-link--instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>

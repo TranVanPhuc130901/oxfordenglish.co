@@ -1,0 +1,115 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset cho danh sách và các phần tử HTML thường gặp */
+ul, ol {
+  list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Cuộn mượt */
+  -webkit-text-size-adjust: 100%; /* Ngăn iOS thay đổi kích thước font */
+}
+
+/* Thiết lập font mặc định */
+body {
+  font-family: 'OpenSans', Arial, sans-serif; /* Font mặc định */
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  line-height: 1.7em;
+  font-weight: 500;
+}
+
+.wrp {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto
+}
+
+/*  HEADER  */
+.header__top-bar {
+  background: #00214d;
+  padding: 4px 0;
+}
+
+.header__top-bar .wrp{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__contact, .header__social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header__top-bar a{
+  font-size: 15px; color: #fff;
+  
+}
+.header__contact-phone span:before,
+.header__contact-email span::before,
+.header__social-link:before {
+  font-family: ETmodules !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0;
+}
+
+.header__contact-phone span:before {
+  content: "\e090";
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+}
+
+.header__contact-email span::before {
+  content: "\e076";
+  margin-right: 4px;
+}
+
+.header__social-link--facebook:before {
+  content: "\e093";
+}
+.header__social-link--instagram:before {
+  content: "\e09a";
+}
+
