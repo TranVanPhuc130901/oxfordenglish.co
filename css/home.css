@@ -1,0 +1,187 @@
+/* Banner */
+/* Định dạng chung cho banner */
+.banner {
+  width: 100%;
+  position: relative;
+  max-height: 855px; /* Chiều cao tối thiểu */
+  overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+  margin-top: 140px;
+}
+
+/* Owl Carousel Container */
+.banner__background-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background */
+.banner__background {
+  position: relative; /* Bố trí hình ảnh trong slider */
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 2543 / 855;
+}
+
+/* Hình ảnh */
+.banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
+  object-position: center; /* Căn giữa ảnh */
+  display: block;
+}
+
+/* Banner Content */
+.banner__content {
+  position: absolute;
+  top: 50%; /* Đặt ở giữa theo chiều dọc */
+  left: 50%; /* Đặt ở giữa theo chiều ngang */
+  transform: translateX(-50%) translateY(100%); /* Bắt đầu từ dưới màn hình */
+  text-align: center; /* Căn giữa nội dung */
+  background: rgba(0, 0, 0, 0.5); /* Nền mờ màu đen */
+  padding: 20px 30px; /* Khoảng cách bên trong */
+  border-radius: 8px; /* Bo tròn góc */
+  color: white; /* Màu chữ */
+  z-index: 10; /* Đảm bảo nội dung nằm trên ảnh */
+  max-width: 80%; /* Đảm bảo nội dung không tràn khỏi khung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng */
+  opacity: 0; /* Ban đầu nội dung ẩn */
+  transition: transform 0.7s ease, opacity 0.7s ease; /* Hiệu ứng mượt hơn */
+}
+
+/* Title Styling */
+.banner__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Description Styling */
+.banner__description {
+  font-size: 1.2rem; /* Kích thước chữ vừa phải cho mô tả */
+  margin: 0;
+  line-height: 1.5; /* Tăng khoảng cách dòng để dễ đọc hơn */
+}
+
+/* Khi active */
+.banner__content.active {
+  transform: translateX(-50%) translateY(-50%); /* Di chuyển vào chính giữa màn hình */
+  opacity: 1; /* Hiển thị nội dung */
+}
+
+.banner__background-group .owl-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.banner__background-group .owl-dots .owl-dot {
+  display: inline-block;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  text-indent: -9999px;
+  border-radius: 7px;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.banner__background-group .owl-dots .owl-dot.active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* Tùy chỉnh chung cho nút điều hướng */
+.banner__background-group .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.banner__background-group .owl-prev,
+.banner__background-group .owl-next {
+  color: white; /* Màu biểu tượng */
+  font-size: 24px; /* Kích thước biểu tượng */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Bo tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner__background-group .owl-prev span,
+.banner__background-group .owl-next span {
+  font-size: 50px;
+  color: #fff;
+}
+
+/* Vị trí nút Prev */
+.banner__background-group .owl-prev {
+  position: absolute;
+  left: 10px; /* Cách lề trái */
+}
+
+/* Vị trí nút Next */
+.banner__background-group .owl-next {
+  position: absolute;
+  right: 10px; /* Cách lề phải */
+}
+
+.homepage-ratings {
+  padding: 54px 0;
+}
+
+.homepage-ratings .homepage-ratings__title {
+  padding: 27px 0;
+  text-align: center;
+}
+
+.homepage-ratings__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homepage-ratings__list .homepage-ratings__item {
+  display: flex;
+  width: 225px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.homepage-ratings__circle {
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Phần trăm bên trong vòng tròn */
+.homepage-ratings__percentage {
+  position: absolute;
+  font-size: 1.5rem; /* Kích thước chữ */
+  font-weight: bold;
+  color: #00aaff; /* Màu chữ */
+}
+
+/* Label phía dưới vòng tròn */
+.homepage-ratings__label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
