@@ -1,0 +1,283 @@
+.banner {
+  position: relative;
+}
+
+.banner__background {
+  position: relative;
+  overflow: hidden;
+  /* height: 100%;  */
+  aspect-ratio: 2543 / 855;
+}
+
+.banner__background img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.banner__content {
+  position: absolute;
+  bottom: 30%;
+  left: 50px;
+  background-color: rgba(0, 33, 77, 0.47);
+  padding: 20px 30px 20px 50px;
+  border-radius: 8px;
+  color: white;
+  z-index: 10; /* Đảm bảo nội dung nằm trên hình nền */
+  width: auto;
+  max-width: 45%;
+}
+
+/* Title Styling */
+.banner__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Description Styling */
+.banner__description {
+  font-size: 1.2rem; /* Kích thước chữ vừa phải cho mô tả */
+  margin: 0;
+  line-height: 1.5; /* Tăng khoảng cách dòng để dễ đọc hơn */
+}
+
+.banner__menu {
+  position: absolute;
+    /* width: 170px; */
+    right: 10%;
+    top: 0;
+    color: #ffffff !important;
+    background-color: rgba(0, 33, 77, 0.47);
+}
+
+.banner__menu a {
+  /* padding: 10px; */
+  display: inline-block;
+  font-size: 20px;
+    font-weight: 500;
+    padding: .3em 1em;
+    line-height: 1.7em;
+    background-color: transparent;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 2px solid;
+    border-radius: 3px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.banner__menu a:after {
+  font-family: ETmodules;
+  font-size: 32px;
+  line-height: 1em;
+  content: "\35";
+  opacity: 0;
+  position: absolute;
+  margin-left: -1em;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern" off;
+  font-feature-settings: "kern" off;
+  font-variant: none;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.banner__menu a:hover:after {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.banner__menu a:hover  {
+  padding: .3em 1.5em .3em 1em;
+}
+
+.course-page__container {
+  width: 89%;
+  max-width: 89%;
+  display: flex;
+  align-items: flex-start;
+  gap: 5.5%;
+  margin: 54px auto;
+}
+
+.course-tabs {
+  border: 1px solid #d9d9d9;
+}
+.course-tabs__content {
+  padding: 24px 30px;
+}
+
+.course-page__main {
+  width: 65%;
+}
+
+.course-page__sidebar {
+  width: calc(100% - 70.5%);
+}
+
+.course-tabs__nav {
+  background-color: #f4f4f4;
+  display: flex;
+}
+
+.course-tabs__nav-item {
+  border-right: 1px solid #d9d9d9;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+  display: table;
+  z-index: 11;
+  line-height: 1.7em;
+  padding: 4px 30px;
+
+}
+
+.course-tabs__nav-item.course-tabs__nav-item--active {
+  background-color: #fff;
+}
+.course-tabs__content-item {
+  aspect-ratio: 16/9;
+}
+
+.course-tabs__content-item iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.course-tabs__content-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.course-tabs__content-item--active {
+  display: block;
+  opacity: 1;
+}
+
+.faq-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-item.faq-item__active {
+  background: #fff; /* Màu nền trắng khi active */
+  padding: 15px; /* Đảm bảo khoảng cách padding */
+  border: 1px solid #ddd; /* Thêm viền cho nổi bật */
+  transition: background 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
+}
+.faq-item.faq-item__active .faq-header {
+  background: #fff; 
+  padding: 0;
+}
+.faq-item .faq-header {
+  background-color: #00274d;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq-content {
+  /* padding: 15px; */
+  /* background-color: #f9f9f9; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.faq-icon::before {
+  content: "\e050";
+  font-family: ETmodules !important;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0;
+  color: #ccc;
+}
+.key-facts-icon,
+.registration-info-icon{
+  font-family: ETmodules;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.key-facts-icon::before {
+  content: "";
+  font-size: 48px;
+  color: #ffffff;
+  background-color: #00214d;
+  border-color: #98b5ea;
+  padding: 25px;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+.registration-info-icon::before {
+  content: "";
+  font-size: 48px;
+  color: #ffffff;
+  background-color: #00214d;
+  border-color: #98b5ea;
+  padding: 25px;
+  border-radius: 100%;
+  border-style: solid;
+} 
+
+.faq-icon.active::before {
+  content: "\e04f";
+}
+
+.course-page__main h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+.course-page__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.key-facts ,
+.registration-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}

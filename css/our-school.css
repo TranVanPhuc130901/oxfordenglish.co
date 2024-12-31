@@ -1,0 +1,136 @@
+.banner {
+  position: relative;
+}
+
+.banner__background {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Hoặc chiều cao mong muốn */
+}
+
+.banner__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner__content {
+  position: absolute;
+  bottom: 30%;
+  left: 50px;
+  background-color: rgba(0, 33, 77, 0.47);
+  padding: 20px 30px 20px 50px;
+  border-radius: 8px;
+  color: white;
+  z-index: 10; /* Đảm bảo nội dung nằm trên hình nền */
+  width: auto;
+  max-width: 45%;
+}
+
+/* Title Styling */
+.banner__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Description Styling */
+.banner__description {
+  font-size: 1.2rem; /* Kích thước chữ vừa phải cho mô tả */
+  margin: 0;
+  line-height: 1.5; /* Tăng khoảng cách dòng để dễ đọc hơn */
+}
+
+.banner__menu {
+  position: absolute;
+    width: 170px;
+    right: 10%;
+    top: 0;
+    color: #ffffff;
+    background-color: rgba(0, 33, 77, 0.47);
+}
+
+.banner__menu a {
+  /* padding: 10px; */
+  display: inline-block;
+  font-size: 20px;
+    font-weight: 500;
+    padding: .3em 1em;
+    line-height: 1.7em;
+    background-color: transparent;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 2px solid;
+    border-radius: 3px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.banner__menu a:after {
+  font-family: ETmodules;
+  font-size: 32px;
+  line-height: 1em;
+  content: "\35";
+  opacity: 0;
+  position: absolute;
+  margin-left: -1em;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern" off;
+  font-feature-settings: "kern" off;
+  font-variant: none;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.banner__menu a:hover:after {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.banner__menu a:hover  {
+  padding: .3em 1.5em .3em 1em;
+}
+
+.our-school-introduction {
+  padding: 54px 0;
+}
+
+.our-school-introduction__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.our-school-benefits {
+  background-color: #2d3743;
+  padding: 54px 0;
+  margin-bottom: 54px;
+}
+
+.our-school-benefits__container {
+  display: flex;
+  gap: 5.5%;
+}
+
+.our-school-benefits__item {
+  width: calc((100% - 11%) / 3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+}
+
+.our-school-benefits__title {font-weight: 500;}
+
+.contact-form {
+  background: url(../asset/School-hi-Cloudless-Final-1.jpg) no-repeat center;
+}
+.contact-form__label {
+  color: #fff;
+}

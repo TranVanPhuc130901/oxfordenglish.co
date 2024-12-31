@@ -1,0 +1,373 @@
+.student-life-info {
+  margin: 54px 0;
+}
+
+.social-activities {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 15px;
+  background-color: #f9f9f9;
+}
+
+.social-activities .wrp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-activities__content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.social-activities__follow {
+  margin-top: 20px;
+}
+
+.social-activities__follow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1877f2;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-activities__follow-link:hover {
+  background-color: #0056b3;
+}
+
+.social-activities__image {
+  flex: 1;
+  max-width: 35%;
+}
+
+.social-activities__img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.social-activities__follow-icon {
+  font-family: ETmodules;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.social-activities__follow-icon::before {
+  content: "\e093";
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.first-day {
+  padding: 30px 15px;
+  background-color: #f9f9f9;
+}
+
+.first-day .wrp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.first-day__content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.first-day__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.first-day__subheading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.first-day__list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.first-day__sidebar {
+  flex: 1;
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.first-day__image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.first-day__button {
+  display: inline-block;
+  background-color: #00214d;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.first-day__button:hover {
+  background-color: #004080;
+}
+
+.first-day__faq {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-header {
+  padding: 15px;
+  background-color: #f4f4f4;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  background-color: white;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
+.faq-item.active .faq-header {
+  background-color: #f4f4f4;
+}
+
+.faq-item .faq-header {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+
+.accommodation {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.accommodation__intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.accommodation__title {
+  font-size: 2rem;
+  color: #00214d;
+}
+
+.accommodation__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Bố cục hai cột */
+.accommodation__content {
+  display: flex;
+  gap: 20px;
+}
+
+.accommodation__left,
+.accommodation__right {
+  flex: 1;
+}
+
+/* Choices Styling */
+.accommodation__choice {
+  margin-bottom: 20px;
+}
+
+.accommodation__choice-title {
+  font-size: 1.2rem;
+  color: #00214d;
+  margin-bottom: 10px;
+}
+
+.accommodation__list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+/* Images Styling */
+.accommodation__images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accommodation__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Styling */
+.accommodation__faq {
+  margin-top: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.faq-item.faq-item__active .faq-content {
+  max-height: 200px; /* Adjust based on content */
+}
+
+.faq-item.faq-item__active .faq-header {
+  color: #00214d;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.faq-item__active .faq-icon {
+  transform: rotate(45deg);
+}
+
+
+.student-visa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.student-visa__content {
+  flex: 2;
+  color: #333;
+}
+
+.student-visa__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00214d;
+}
+
+.student-visa__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.student-visa__link {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.student-visa__link a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.student-visa__link a:hover {
+  text-decoration: underline;
+}
+
+.student-visa__list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.student-visa__list li {
+  margin-bottom: 10px;
+}
+
+.student-visa__list strong {
+  color: #00214d;
+}
+
+.student-visa__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student-visa__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-form {
+  max-width: 1080px;
+}
