@@ -70,7 +70,7 @@
 /* Khi active */
 .banner__content.active {
   opacity: 1; /* Hiển thị nội dung */
-  transform: translate(-50%,-50%); /* Đưa về vị trí ban đầu */
+  transform: translate(-50%, -50%); /* Đưa về vị trí ban đầu */
 }
 
 .banner__background-group .owl-dots {
@@ -153,8 +153,6 @@
   font-weight: 700;
 }
 
-
-
 .homepage-ratings__list {
   display: flex;
   align-items: center;
@@ -217,13 +215,13 @@
 .homepage-courses__container {
   display: flex;
   align-items: center;
-  gap: 5.5%;
+  gap: 50px;
   flex-wrap: wrap;
   padding-top: 57px;
 }
 
 .homepage-courses__container .homepage-courses__item {
-  width: calc((100% - 16.5%)/4);
+  width: calc((100% - 150px) / 4);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -235,32 +233,31 @@
 .homepage-courses__item-title {
   font-size: 23px;
   font-weight: 700;
-
 }
 
 .homepage-courses__item-button,
 .homepage-courses__brochure-button {
   display: inline-block;
   font-size: 20px;
-    font-weight: 500;
-    padding: .3em 1em;
-    line-height: 1.7em;
-    background-color: transparent;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    border: 2px solid;
-    border-radius: 3px;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .homepage-courses__item-button:hover,
 .homepage-courses__brochure-button:hover {
   border: 2px solid transparent;
-    padding: .3em 2em .3em .7em;
-    border-radius: 0px;
-    background-color: hsla(0, 0%, 100%, .2);
+  padding: 0.3em 2em 0.3em 0.7em;
+  border-radius: 0px;
+  background-color: hsla(0, 0%, 100%, 0.2);
 }
 
 .homepage-courses__item-button:after,
@@ -272,8 +269,8 @@
   opacity: 0;
   position: absolute;
   margin-left: -1em;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   text-transform: none;
   -webkit-font-feature-settings: "kern" off;
   font-feature-settings: "kern" off;
@@ -306,13 +303,13 @@
   font-weight: 700;
 }
 
-.homepage-courses__brochure-icon::after{
+.homepage-courses__brochure-icon::after {
   font-family: ETmodules;
   font-size: 100px;
   line-height: 1em;
   content: "\69";
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   text-transform: none;
   -webkit-font-feature-settings: "kern" off;
   font-feature-settings: "kern" off;
@@ -321,7 +318,6 @@
   font-weight: 400;
   text-shadow: none;
 }
-
 
 .homepage-testimonials {
   padding: 54px 0;
@@ -335,13 +331,13 @@
 }
 
 .homepage-testimonials__container {
-  padding: 27px 0; 
+  padding: 27px 0;
   display: flex;
   gap: 5.5%;
 }
 
 .homepage-testimonials__item {
-  width: calc((100% - 5.5%)/2);
+  width: calc((100% - 5.5%) / 2);
   position: relative;
   padding: 30px;
   line-height: 1.5;
@@ -388,9 +384,73 @@
 }
 
 .homepage-introduction {
-  max-width: 80%;
+  max-width: 89%;
   background-color: rgba(0, 31, 76, 0.17);
   padding: 20px;
   margin: 0 auto;
 }
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .your-class {
+    /* CSS cho tablet */
+  }
+}
+
+/* Mobile nhỏ và /* Mobile lớn */
+@media (max-width: 767px) {
+  .homepage-ratings__list {
+    flex-direction: column;
+  }
+  .homepage-courses__title,
+  .homepage-testimonials__title {
+    line-height: 1.2;
+  }
+
+  .homepage-courses__container {
+    flex-wrap: wrap;
+  }
+  .homepage-courses__container .homepage-courses__item {
+    width: calc(50% - 25px);
+  }
+  .homepage-testimonials__container {
+    flex-wrap: wrap;
+  }
+  .homepage-testimonials__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .homepage-testimonials__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage-testimonials__author {
+    width: 100%;
+  }
+  .contact-form__group {
+    width: 100%;
+  }
+  .contact-form__group.contact-form__group--captcha {
+    width: unset;
+  }
+  .footer__links-list {
+    justify-content: center;
+    gap: 14px;
+  }
+  .footer__details {
+    flex-direction: column-reverse;
+  }
+  .footer__certifications {
+    flex-wrap: wrap;
+  }
+  .banner__background {
+    aspect-ratio: 390/520;
+  }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 480px) {
+  .homepage-courses__container .homepage-courses__item {
+    width: 100%;
+  }
+}

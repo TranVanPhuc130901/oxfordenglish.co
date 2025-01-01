@@ -29,23 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
 document.querySelectorAll('.faq-header').forEach(header => {
-    header.addEventListener('click', function() {
+    header.addEventListener('click', function () {
         const content = this.nextElementSibling; // Lấy phần tử nội dung
         const icon = this.querySelector('.faq-icon'); // Lấy icon
         const parentItem = this.parentElement; // Lấy phần tử cha là .faq-item
 
-        // Toggle trạng thái của mục hiện tại
-        if (content.style.maxHeight) {
-            // Nếu đã mở, đóng lại
-            content.style.maxHeight = null;
-            icon.classList.remove('active'); // Gỡ lớp active của icon
-            parentItem.classList.remove('faq-item__active'); // Gỡ lớp active của mục
-        } else {
-            // Nếu đang đóng, mở ra
-            content.style.maxHeight = content.scrollHeight + 'px';
-            icon.classList.add('active'); // Thêm lớp active cho icon
-            parentItem.classList.add('faq-item__active'); // Thêm lớp active cho mục
+        // Kiểm tra nội dung có tồn tại
+        if (content) {
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                // Nếu đã mở, đóng lại
+                content.style.maxHeight = null;
+                icon.classList.remove('active'); // Gỡ lớp active của icon
+                parentItem.classList.remove('faq-item__active'); // Gỡ lớp active của mục
+            } else {
+                // Nếu đang đóng, mở ra
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('active'); // Thêm lớp active cho icon
+                parentItem.classList.add('faq-item__active'); // Thêm lớp active cho mục
+            }
         }
     });
 });

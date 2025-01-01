@@ -1,3 +1,16 @@
+$(document).ready(function() {
+    $('.faq-category__right--image.owl-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        items: 1,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+    });
+});
+
 document.querySelectorAll('.faq-header').forEach(header => {
     header.addEventListener('click', function () {
         const content = this.nextElementSibling; // Lấy phần tử nội dung
@@ -20,31 +33,3 @@ document.querySelectorAll('.faq-header').forEach(header => {
         }
     });
 });
-
-$(document).ready(function() {
-    $('.social-activities__image.owl-carousel').owlCarousel({
-        loop: false,
-        margin: 0,
-        items: 1,
-        nav: false,
-        dots: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-    });
-});
-
-$(document).ready(function() {
-    $('.accommodation__image.owl-carousel').owlCarousel({
-        loop: false,
-        margin: 0,
-        items: 1,
-        nav: false,
-        dots: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-    });
-});
-
-

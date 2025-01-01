@@ -18,14 +18,15 @@
 .banner__content {
   position: absolute;
   bottom: 30%;
-  left: 50px;
+  left: -15px;
   background-color: rgba(0, 33, 77, 0.47);
   padding: 20px 30px 20px 50px;
   border-radius: 8px;
   color: white;
   z-index: 10; /* Đảm bảo nội dung nằm trên hình nền */
   width: auto;
-  max-width: 45%;
+  max-width: 50%;
+  width: 45%;
 }
 
 /* Title Styling */
@@ -44,28 +45,29 @@
 
 .banner__menu {
   position: absolute;
-    /* width: 170px; */
-    right: 10%;
-    top: 0;
-    color: #ffffff !important;
-    background-color: rgba(0, 33, 77, 0.47);
+  /* width: 170px; */
+  right: 10%;
+  top: -2px;
+  color: #ffffff !important;
+  background-color: rgba(0, 33, 77, 0.47);
+  border-radius: 3px;
 }
 
 .banner__menu a {
   /* padding: 10px; */
   display: inline-block;
   font-size: 20px;
-    font-weight: 500;
-    padding: .3em 1em;
-    line-height: 1.7em;
-    background-color: transparent;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    border: 2px solid;
-    border-radius: 3px;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+  font-weight: 500;
+  padding: 0.3em 1.5em 0.3em 1em;
+  line-height: 1.7em;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .banner__menu a:after {
@@ -76,8 +78,8 @@
   opacity: 0;
   position: absolute;
   margin-left: -1em;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   text-transform: none;
   -webkit-font-feature-settings: "kern" off;
   font-feature-settings: "kern" off;
@@ -92,8 +94,10 @@
   margin-left: 0;
 }
 
-.banner__menu a:hover  {
-  padding: .3em 1.5em .3em 1em;
+.banner__menu a:hover {
+  border: 2px solid transparent;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .course-page__container {
@@ -135,7 +139,6 @@
   z-index: 11;
   line-height: 1.7em;
   padding: 4px 30px;
-
 }
 
 .course-tabs__nav-item.course-tabs__nav-item--active {
@@ -181,7 +184,7 @@
   transition: background 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
 }
 .faq-item.faq-item__active .faq-header {
-  background: #fff; 
+  background: #fff;
   padding: 0;
 }
 .faq-item .faq-header {
@@ -227,11 +230,11 @@
   color: #ccc;
 }
 .key-facts-icon,
-.registration-info-icon{
+.registration-info-icon {
   font-family: ETmodules;
   font-weight: 400;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .key-facts-icon::before {
@@ -243,6 +246,7 @@
   padding: 25px;
   border-radius: 100%;
   border-style: solid;
+  display: inline-block;
 }
 
 .registration-info-icon::before {
@@ -254,7 +258,8 @@
   padding: 25px;
   border-radius: 100%;
   border-style: solid;
-} 
+  display: inline-block;
+}
 
 .faq-icon.active::before {
   content: "\e04f";
@@ -269,15 +274,224 @@
 .course-page__sidebar {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
   align-items: center;
   text-align: center;
 }
 
-.key-facts ,
+.key-facts,
 .registration-info {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+#exam-format {
+  margin: 20px;
+}
+
+#exam-format {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#exam-format th,
+#exam-format td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#exam-format th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+#exam-format tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#exam-format tr:hover {
+  background-color: #f1f1f1;
+}
+
+#exam-format th:first-child,
+#exam-format td:first-child {
+  width: 30%;
+}
+
+#exam-format th:nth-child(2),
+#exam-format td:nth-child(2) {
+  width: 20%;
+}
+
+#exam-format th:last-child,
+#exam-format td:last-child {
+  width: 50%;
+}
+
+.ourCourse-category-courses {
+  color: #fff;
+}
+
+.ourCourse-category-courses__top {
+  background: url(../asset/Student_HomeBLUE-1.jpg) no-repeat center;
+  padding: 27px 0;
+}
+
+.ourCourse-category-courses__title {
+  font-size: 33px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.75%;
+}
+
+.ourCourse-category-courses__subtitle {
+  font-size: 23px;
+  text-align: center;
+}
+
+.ourCourse-category-courses__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 57px;
+  justify-content: center;
+}
+
+.ourCourse-category-courses__container .ourCourse-category-courses__item {
+  width: calc((100% - 60px) / 4);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 0;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.ourCourse-category-courses__item-title {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.ourCourse-category-courses__item-button,
+.ourCourse-category-courses__brochure-button {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ourCourse-category-courses__item-button:hover,
+.ourCourse-category-courses__brochure-button:hover {
+  border: 2px solid transparent;
+  padding: 0.3em 2em 0.3em 0.7em;
+  border-radius: 0px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+.ourCourse-category-courses__item-button:after,
+.ourCourse-category-courses__brochure-button:after {
+  font-family: ETmodules;
+  font-size: 32px;
+  line-height: 1em;
+  content: "\35";
+  opacity: 0;
+  position: absolute;
+  margin-left: -1em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern" off;
+  font-feature-settings: "kern" off;
+  font-variant: none;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.ourCourse-category-courses__item-button:hover:after,
+.ourCourse-category-courses__brochure-button:hover:after {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.ourCourse-category-courses__brochure {
+  padding: 54px 0;
+  background-color: #00214d;
+  text-align: center;
+}
+
+.ourCourse-category-courses__brochure .wrp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ourCourse-category-courses__brochure-title {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.ourCourse-category-courses__brochure-icon::after {
+  font-family: ETmodules;
+  font-size: 100px;
+  line-height: 1em;
+  content: "\69";
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-transform: none;
+  -webkit-font-feature-settings: "kern" off;
+  font-feature-settings: "kern" off;
+  font-variant: none;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.ourCourse-category-introduction {
+  max-width: 89%;
+  background-color: rgba(0, 31, 76, 0.17);
+  padding: 20px;
+  margin: 54px auto 0 auto;
+}
+
+.ourCourse-category-courses__icon {
+  background-color: rgb(255, 255, 255);
+  color: #002654;
+  border: 3px solid #00214d;
+  font-size: 48px;
+  border-radius: 50%; /* Sử dụng 50% để đảm bảo bo tròn */
+  padding: 25px;
+  width: 104px; /* Đảm bảo chiều rộng */
+  height: 104px; /* Đảm bảo chiều cao */
+  margin-bottom: 20px;
+}
+
+.ourCourse-category-courses__icon:hover {
+  background-color: rgb(221, 221, 255);
+}
+
+.ourCourse-category-courses__icon::after {
+  font-family: ETmodules;
+  font-size: 48px;
+  line-height: 1em;
+  content: "\69";
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: 400;
 }
