@@ -22,14 +22,14 @@
 // });
 $(document).ready(function() {
     $('.banner__background-group.owl-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 0,
         items: 1,
         nav: true,
         dots: true,
         autoplay: false,
         autoplayTimeout: 5000,
-        autoplayHoverPause: true,
+        autoplayHoverPause: false,
         onInitialized: function(event) {
             // Hiển thị hiệu ứng chữ cho slide đầu tiên
             let firstContent = $(event.target).find('.owl-item.active .banner__content');

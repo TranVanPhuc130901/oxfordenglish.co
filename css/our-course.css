@@ -1,6 +1,3 @@
-
-
-
 .course-page__container {
   width: 89%;
   max-width: 89%;
@@ -239,7 +236,7 @@
 
 .ourCourse-category-courses {
   color: #fff;
-  padding-bottom: 27px
+  padding-bottom: 27px;
 }
 
 .ourCourse-category-courses__top {
@@ -403,16 +400,22 @@
 }
 
 @media (max-width: 980px) {
- .course-page__main, .course-page__sidebar {
-  width: 100%;
- }
- .ourCourse-category-courses__container .ourCourse-category-courses__item {
-  width: calc(50% - 10px);
- }
- }
+  .course-page__main,
+  .course-page__sidebar {
+    width: 100%;
+  }
+  .ourCourse-category-courses__container .ourCourse-category-courses__item {
+    width: calc(50% - 10px);
+  }
+  .banner__background {
+    margin-bottom: 40px;
+  }
+  .banner__description {
+    font-size: 18px;
+  }
+}
 
-
- @media (max-width: 767px) {
+@media (max-width: 767px) {
   .course-tabs__nav {
     flex-direction: column;
   }
@@ -423,29 +426,35 @@
   .ourCourse-category-courses__title {
     line-height: 1.2;
   }
+}
+
+@media (max-width: 479px) {
+  .course-page__main h2 {
+    line-height: 1.2;
+  }
+  .ourCourse-category-courses__container .ourCourse-category-courses__item {
+    width: 100%;
+  }
+  .course-tabs__content {
+    padding: 10px;
+  }
+  .table-container {
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    -webkit-overflow-scrolling: touch; /* Mượt mà trên iOS */
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
   }
 
-  @media (max-width: 479px) {
-    .ourCourse-category-courses__container .ourCourse-category-courses__item {
-      width: 100%;
-    }
-    .course-tabs__content {
-      padding: 10px;
-    }
-    .table-container {
-      overflow-x: auto; /* Cho phép cuộn ngang */
-      -webkit-overflow-scrolling: touch; /* Mượt mà trên iOS */
-      width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
-    }
-  
-    .course-tabs__table {
-        width: 200%; /* Rộng hơn màn hình để hiển thị cuộn */
-        border-collapse: collapse; /* Tùy chọn: gọn bảng */
-    }
-    #exam-format {
-      margin: 0;
-    }
-    }
-
-
-  
+  .course-tabs__table {
+    width: 200%; /* Rộng hơn màn hình để hiển thị cuộn */
+    border-collapse: collapse; /* Tùy chọn: gọn bảng */
+  }
+  #exam-format {
+    margin: 0;
+  }
+  .banner__description {
+    display: none;
+  }
+  .banner__title {
+    margin-bottom: 0;
+  }
+}

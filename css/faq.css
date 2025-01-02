@@ -1,6 +1,5 @@
 .faq-category {
-  padding: 54px 0;
-  /* background-color: #f9f9f9; */
+  padding: 71px 0;
 }
 
 .faq-category .wrp {
@@ -8,11 +7,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 50px;
-  padding: 27px 0;
 }
 
 .faq-category__left {
-  /* flex: 1; */
   width: 65%;
 }
 
@@ -192,7 +189,7 @@
 }
 
 .contact-form.contact-form-faq-index .contact-form__form {
- column-gap: 30px;
+  column-gap: 30px;
 }
 
 .contact-form.contact-form-faq-index .contact-form__group.contact-form__full {
@@ -256,7 +253,6 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-
 @media (max-width: 980px) {
   .contact-form.contact-form-faq-index {
     padding: 0 20px;
@@ -264,5 +260,19 @@
   .faq-category__right,
   .faq-category__left {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form.contact-form-faq-index .contact-form__group.contact-form__full {
+    margin: 0;
+  }
+}
+@media (max-width: 479px) {
+  .banner__description {
+    display: none;
+  }
+  .banner__title {
+    margin-bottom: 0;
   }
 }

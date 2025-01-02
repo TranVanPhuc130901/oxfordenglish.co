@@ -65,36 +65,36 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const navSearch = document.querySelector('.header__nav-search');
     const searchForm = document.querySelector('.header__search-form');
-    const navToggle = document.querySelector('.header__nav-toggle');
-    const navList = document.querySelector('.header__nav-list');
+    // const navToggle = document.querySelector('.header__nav-toggle');
+    const navList = document.querySelector('.header__nav-wrapper');
     const headerRight = document.querySelector('.header__right');
     const searchClose = document.querySelector('.header__search-icon--close');
     const nav = document.querySelector('.header__nav');
+    const inputSearch = document.querySelector('.header__search-form .header__search-input');
 
-    if (navSearch && searchForm && navToggle && navList && headerRight && searchClose && nav) {
+    if (navSearch && searchForm && navList && headerRight && searchClose && nav) {
         // Hiển thị form tìm kiếm và thay đổi header
         navSearch.addEventListener('click', function(event) {
             event.preventDefault(); // Ngăn hành động mặc định
-            searchForm.style.display = 'flex'; // Hiển thị form tìm kiếm
-            setTimeout(() => {
-                searchForm.classList.add('active'); // Kích hoạt hiệu ứng form
-            }, 10);
+            searchForm.classList.add('active');
             nav.classList.remove('hidden');
             navList.classList.add('hidden'); // Ẩn nav list
             headerRight.classList.add('active'); // Thêm class active cho header__right
-            navToggle.classList.add('hidden'); // Ẩn icon nav toggle
-
+            inputSearch.focus();
         });
 
         // Đóng form tìm kiếm và phục hồi trạng thái ban đầu
         searchClose.addEventListener('click', function() {
             searchForm.classList.remove('active'); // Xóa class active khỏi form
-            setTimeout(() => {
-                searchForm.style.display = 'none'; // Ẩn form hoàn toàn
-                navToggle.classList.remove('hidden'); // Hiển thị lại icon nav toggle
-            }, 300); // Đồng bộ với thời gian hiệu ứng CSS (0.3s)
             navList.classList.remove('hidden'); // Hiển thị lại nav list
             headerRight.classList.remove('active'); // Xóa class active khỏi header__right
         });
     }
+});
+
+const translateButton = document.getElementById("translateButton");
+const flag = document.querySelector(".translate__flag");
+
+translateButton.addEventListener("click", () => {
+  flag.classList.toggle("translate__flag--hidden");
 });
