@@ -1,5 +1,5 @@
 .faq-category {
-  padding: 30px 15px;
+  padding: 54px 0;
   /* background-color: #f9f9f9; */
 }
 
@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 50px;
+  padding: 27px 0;
 }
 
 .faq-category__left {
@@ -175,6 +176,10 @@
   margin: 54px 0;
 }
 
+.faq-index {
+  padding-top: 27px;
+}
+
 .contact-form.contact-form-faq-index {
   max-width: 1080px;
   background-color: #fff;
@@ -183,6 +188,15 @@
 
 .contact-form.contact-form-faq-index .contact-form__title {
   color: #333;
+  font-weight: 500;
+}
+
+.contact-form.contact-form-faq-index .contact-form__form {
+ column-gap: 30px;
+}
+
+.contact-form.contact-form-faq-index .contact-form__group.contact-form__full {
+  margin: 30px 0;
 }
 
 .contact-form.contact-form-faq-index .contact-form__group input,

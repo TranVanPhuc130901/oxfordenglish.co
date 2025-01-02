@@ -17,13 +17,13 @@ $(document).ready(function() {
     $('.header__nav-toggle--mobile').on('click', function() {
         const nav = $('.header__nav');
 
-        if (nav.hasClass('active')) {
+        if (nav.hasClass('hidden')) {
             // Nếu menu đang mở, thu gọn lại
             nav.animate({ height: '0px' }, // Thu gọn chiều cao về 0
                 300, // Thời gian thực hiện (300ms)
                 function() {
                     // Ẩn hoàn toàn menu sau khi thu gọn
-                    nav.css('display', 'none').removeClass('active');
+                    nav.css('display', 'none').removeClass('hidden');
                 }
             );
         } else {
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 .animate({ height: nav.get(0).scrollHeight + 'px' }, // Mở chiều cao tự động
                     300 // Thời gian thực hiện (300ms)
                 )
-                .addClass('active'); // Thêm class active
+                .addClass('hidden'); // Thêm class active
         }
     });
 });
@@ -69,23 +69,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const navList = document.querySelector('.header__nav-list');
     const headerRight = document.querySelector('.header__right');
     const searchClose = document.querySelector('.header__search-icon--close');
+    const nav = document.querySelector('.header__nav');
 
-    if (navSearch && searchForm && navToggle && navList && headerRight && searchClose) {
-        // Hiển thị form tìm kiếm
+    if (navSearch && searchForm && navToggle && navList && headerRight && searchClose && nav) {
+        // Hiển thị form tìm kiếm và thay đổi header
         navSearch.addEventListener('click', function(event) {
             event.preventDefault(); // Ngăn hành động mặc định
-            searchForm.classList.add('active'); // Hiển thị form tìm kiếm
-            navList.style.opacity = '0'; // Ẩn nav list
-            navToggle.style.display = 'none'; // Ẩn nav toggle
-            headerRight.classList.add('search-box'); // Thêm class search-box
+            searchForm.style.display = 'flex'; // Hiển thị form tìm kiếm
+            setTimeout(() => {
+                searchForm.classList.add('active'); // Kích hoạt hiệu ứng form
+            }, 10);
+            nav.classList.remove('hidden');
+            navList.classList.add('hidden'); // Ẩn nav list
+            headerRight.classList.add('active'); // Thêm class active cho header__right
+            navToggle.classList.add('hidden'); // Ẩn icon nav toggle
+
         });
 
-        // Đóng form tìm kiếm khi nhấn vào nút close
+        // Đóng form tìm kiếm và phục hồi trạng thái ban đầu
         searchClose.addEventListener('click', function() {
-            searchForm.classList.remove('active'); // Ẩn form tìm kiếm
-            navList.style.opacity = '1'; // Hiển thị lại nav list
-            navToggle.style.display = 'flex'; // Hiển thị lại nav toggle
-            headerRight.classList.remove('search-box'); // Xóa class search-box
+            searchForm.classList.remove('active'); // Xóa class active khỏi form
+            setTimeout(() => {
+                searchForm.style.display = 'none'; // Ẩn form hoàn toàn
+                navToggle.classList.remove('hidden'); // Hiển thị lại icon nav toggle
+            }, 300); // Đồng bộ với thời gian hiệu ứng CSS (0.3s)
+            navList.classList.remove('hidden'); // Hiển thị lại nav list
+            headerRight.classList.remove('active'); // Xóa class active khỏi header__right
         });
     }
 });
