@@ -37,6 +37,7 @@
 
 .contact-form {
   background: url(../asset/School-hi-Cloudless-Final-1.jpg) no-repeat center;
+  background-size: cover;
 }
 .contact-form__label {
   color: #fff;

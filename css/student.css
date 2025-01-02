@@ -415,6 +415,7 @@
 .contact-form.contact-form-social-activities {
   max-width: 89%;
   background: url("../asset/School-hi-Cloudless-Final-1.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .contact-form.contact-form-social-activities .contact-form__label {
@@ -424,10 +425,6 @@
 .contact-form.contact-form-student-visa {
   background-color: #fff;
   padding: 0;
-}
-
-.contact-form.contact-form-student-visa .contact-form__form {
-  column-gap: 30px;
 }
 
 .contact-form__group.contact-form__full .contact-form__title {

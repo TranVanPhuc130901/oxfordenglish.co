@@ -171,7 +171,7 @@ body {
 .header__nav-wrapper.hidden {
   opacity: 0;
   transform: translateY(-20px);
-  display: none;
+  /* display: none; */
 }
 
 .header--scrolled .header__right {
@@ -845,6 +845,9 @@ body {
   }
   .footer__certifications {
     flex-wrap: wrap;
+  }
+  .header__nav-wrapper.hidden {
+    display: none;
   }
 }
 
