@@ -119,6 +119,7 @@
 .our-school-benefits__container {
   display: flex;
   gap: 5.5%;
+  flex-wrap: wrap;
 }
 
 .our-school-benefits__item {
@@ -141,3 +142,11 @@
 .contact-form__label {
   color: #fff;
 }
+
+
+@media (max-width: 980px) {
+  .our-school-benefits__item {
+    width: 100%;
+    margin-bottom:30px ;
+  }
+ }

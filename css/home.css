@@ -19,18 +19,19 @@
 /* Background */
 .banner__background {
   position: relative; /* Bố trí hình ảnh trong slider */
+  top: 0;
   width: 100%;
   overflow: hidden;
   aspect-ratio: 2543 / 855;
+  /* background-attachment: fixed; */
 }
 
 /* Hình ảnh */
 .banner__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
-  object-position: center; /* Căn giữa ảnh */
-  display: block;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Banner Content */
@@ -391,14 +392,14 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .your-class {
-    /* CSS cho tablet */
+/* @media (min-width: 768px) and (max-width: 1023px) {
+ .banner__background {
+    aspect-ratio: 991 /520;
   }
-}
+} */
 
 /* Mobile nhỏ và /* Mobile lớn */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .homepage-ratings__list {
     flex-direction: column;
   }
@@ -427,12 +428,6 @@
   .homepage-testimonials__author {
     width: 100%;
   }
-  .contact-form__group {
-    width: 100%;
-  }
-  .contact-form__group.contact-form__group--captcha {
-    width: unset;
-  }
   .footer__links-list {
     justify-content: center;
     gap: 14px;
@@ -443,6 +438,13 @@
   .footer__certifications {
     flex-wrap: wrap;
   }
+  
+  .banner__background {
+    aspect-ratio: 991 /520;
+  }
+}
+
+@media (max-width: 767px) {
   .banner__background {
     aspect-ratio: 390/520;
   }

@@ -241,3 +241,14 @@
   padding: 0.3em 2em 0.3em 0.7em;
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+
+@media (max-width: 980px) {
+  .contact-form.contact-form-faq-index {
+    padding: 0 20px;
+  }
+  .faq-category__right,
+  .faq-category__left {
+    width: 100%;
+  }
+}

@@ -18,7 +18,6 @@
 }
 
 .social-activities__content {
-  flex: 1;
   width: 50%;
 }
 
@@ -38,10 +37,12 @@
   transition: background-color 0.3s ease;
 }
 
+.social-activities__wrapper {
+  width: calc(100% - 50% - 50px);
+}
 .social-activities__image {
-  flex: 1;
-  width: calc(100% - 50% - 50px); /* Chiều rộng vẫn có thể điều chỉnh */
-  aspect-ratio: 511 / 287; /* Đảm bảo tỷ lệ chiều rộng và chiều cao */
+  /* Chiều rộng vẫn có thể điều chỉnh */
+  /* aspect-ratio: 511 / 287; Đảm bảo tỷ lệ chiều rộng và chiều cao */
   display: block; /* Đảm bảo layout */
   overflow: hidden; /* Đảm bảo không có phần tử tràn ra ngoài */
 }
@@ -112,7 +113,6 @@
 }
 
 .first-day__content {
-  flex: 1;
   width: 50%;
 }
 
@@ -136,7 +136,6 @@
 }
 
 .first-day__sidebar {
-  flex: 1;
   width: calc(100% - 50% - 50px);
   display: flex;
   flex-direction: column;
@@ -272,10 +271,7 @@
 }
 
 .accommodation {
-  margin: 0 auto;
   padding: 20px;
-  max-width: 1200px;
-  font-family: Arial, sans-serif;
   color: #333;
 }
 
@@ -299,11 +295,11 @@
 .accommodation__content {
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .accommodation__left,
 .accommodation__right {
-  flex: 1;
   width: calc(50% - 25px);
 }
 
@@ -350,11 +346,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .student-visa__content {
-  flex: 2;
+  width: calc(50% - 25px);
   color: #333;
 }
 
@@ -402,7 +399,7 @@
 }
 
 .student-visa__image {
-  flex: 1;
+  width: calc(50% - 25px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,4 +423,86 @@
 
 .contact-form.contact-form-social-activities .contact-form__label {
   color: #fff;
+}
+
+.contact-form.contact-form-student-visa {
+  background-color: #fff;
+  padding: 0;
+}
+
+.contact-form.contact-form-student-visa .contact-form__title {
+  color: #333;
+}
+
+.contact-form.contact-form-student-visa .contact-form__group input,
+.contact-form.contact-form-student-visa .contact-form__group textarea {
+  /* width: 100%; */
+  background-color: #eee;
+  border: none;
+  outline: none;
+  color: #666;
+}
+
+.contact-form.contact-form-student-visa .contact-form__group input::placeholder,
+.contact-form.contact-form-student-visa
+  .contact-form__group
+  textarea::placeholder {
+  color: #666;
+}
+
+.contact-form.contact-form-student-visa .contact-form__button {
+  color: #2ea3f2;
+  border-width: 2px;
+  border-color: rgba(30, 115, 190, 0.67);
+  background-color: #fff;
+  border-style: solid;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7em;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  padding: 0.4em 0.5em;
+}
+
+.contact-form.contact-form-student-visa .contact-form__button::after {
+  font-family: ETmodules;
+  font-style: normal;
+  font-weight: 400;
+  content: "\35";
+  font-size: 35px;
+  position: absolute;
+  margin-right: 0;
+  z-index: 2;
+  transition: all 0.2s;
+  color: #2ea3f2;
+  opacity: 0;
+}
+
+.contact-form.contact-form-student-visa .contact-form__button:hover::after {
+  opacity: 1;
+  margin-right: 1.3em;
+}
+
+.contact-form.contact-form-student-visa .contact-form__button:hover {
+  border: 2px solid transparent;
+  padding: 0.3em 2em 0.3em 0.7em;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 980px) {
+  .social-activities__content,
+  .social-activities__wrapper,
+  .first-day__content,
+  .first-day__sidebar,
+  .accommodation__left,
+  .accommodation__right,
+  .student-visa__image,
+  .student-visa__content {
+    width: 100%;
+  }
+  .contact-form.contact-form-student-visa {
+    padding: 0 20px;
+  }
 }
