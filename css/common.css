@@ -171,6 +171,7 @@ body {
 .header__nav-wrapper.hidden {
   opacity: 0;
   transform: translateY(-20px);
+  display: none;
 }
 
 .header--scrolled .header__right {
@@ -746,9 +747,9 @@ body {
     /* gap: 20px;
     justify-content: unset; */
   }
-  .header__logo {
+  /* .header__logo {
     margin-right: 50px;
-  }
+  } */
   .header__nav-toggle--mobile::before {
     /* CSS cho điện thoại nhỏ */
     display: block;
