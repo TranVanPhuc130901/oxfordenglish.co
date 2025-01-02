@@ -332,7 +332,7 @@ body {
 .banner {
   width: 100%;
   position: relative;
-  max-height: 855px; /* Chiều cao tối thiểu */
+  max-height: 900px; /* Chiều cao tối thiểu */
   overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
   margin-top: 140px;
   z-index: 10;
